@@ -79,7 +79,7 @@ def display_workflow():
                     st.session_state.completion_dates[idx] = datetime.now().strftime("%Y-%m-%d")
                     if idx < len(WORKFLOW_STEPS):
                         st.session_state.current_step += 1
-                    st.experimental_rerun()
+                    st.rerun()  # Updated from st.experimental_rerun()
 
 def display_timeline():
     st.subheader("Completed Steps Timeline")
